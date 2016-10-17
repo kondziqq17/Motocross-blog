@@ -23,8 +23,10 @@
 body {
 	background-color: #fff;
 	font-family: 'Playfair Display', serif;
+	padding-top: 45px;
 
 }
+
 
 
 
@@ -33,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;	
 }
 
-.navbar-default .navbar-brand {
+.navbar-fixed-top .navbar-brand {
 	color: #000000;
 }
 
@@ -56,8 +58,9 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #1FA67A;
 }
 
-.navbar-default .navbar-nav > li > a {
+.navbar-fixed-top .navbar-nav > li > a {
 	color: #000000;
+
 }
 
 
@@ -87,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .post {
 	box-sizing: border-box;
-	background-color: #DCDCDC;
+	background-color: #F5F5F5;
 	margin-bottom: 25px;
 	margin-right: 10px;
 	margin-left: 10px;
@@ -114,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .post-show {
 	box-sizing: border-box;
-	background-color: #DCDCDC;
+	background-color: #F5F5F5;
 	padding: 2.0em 1.5em;
 	border-bottom: 0px solid #0a8fd5;
 	color: #262626;
