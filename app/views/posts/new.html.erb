@@ -2,10 +2,10 @@
 <div class="col-md-8 col-md-offset-2">
 
 <%= simple_form_for @post do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
+  <%= f.input :title, label: "Tytuł" %>
+  <%= f.input :description, label: "Opis" %>
   <%= f.button :submit %>
 <% end %>
-<%= link_to "Back", root_path %>
+<%= link_to "Wróć", root_path %>
 </div>
 </div>

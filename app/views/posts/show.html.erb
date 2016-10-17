@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="col-md-8 col-md-offset-2">
+		<div class="post-show">
+			<h2><%= @post.title %></h2>
+			<p class="post-posted-by">Utworzone przez <%= @post.user.email %> <%= time_ago_in_words(@post.created_at) %> ago</p>
+			<p class="post-desc"><%= @post.description %></p>
+
+
+			<div class="links btn-group">
+				<%= link_to "Wróć", root_path, class: "btn btn-default" %>
+				<% if @post.user_id == current_user.id %>
+					<%= link_to "Edytuj", edit_post_path(@post), class: "btn btn-default" %>
+					<%= link_to "Usuń", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default" %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 	resources :posts
 
 	get '/home' => 'posts#home'
-  
+	get '/posts/:id/:title' => 'posts#show', :as => :post_with_title
 end

@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 	before_filter :authenticate_user!, except: [:index, :home]
+	before_action :find_post, only: [:show, :edit, :update, :destroy]
 
 	def index
 	end
@@ -37,5 +38,9 @@ class PostsController < ApplicationController
 
 		def post_params
 			params.require(:post).permit(:title, :description)
+		end
+
+		def find_post
+			@post = Post.find(params[:id])
 		end
 end

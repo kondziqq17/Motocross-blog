@@ -1,9 +1,9 @@
-<% @posts.each do |post| %>
-	<div class="col-md-4">
-		<div class="post">
-			<h2 class="post-title"><%= post.title %></h2>
-			<%= link_to "View Post", post, class: "btn-custom" %>
+<div class="container">
+	<% @posts.each do |post| %>
+		<div class="col-md-6">
+			<div class="post">
+				<h2><%= link_to post.title, post_with_title_path(post, :title => post.title) %><h2>
+			</div>
 		</div>
-	</div>
-<% end %>
-
+	<% end %>
+</div>
