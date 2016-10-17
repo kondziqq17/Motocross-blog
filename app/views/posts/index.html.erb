@@ -4,8 +4,11 @@
 	  <p>Witam, by wyświetlić posty kliknij <%= link_to "Tutaj", home_path, :style=>'color:#00BFFF;' %> </p>
 	  <p>Zalogować się, kliknij <%= link_to "Tutaj", new_user_session_path, :style=>'color:	#7CFC00;' %> </p>
 	  <p>Dodać post, kliknij <%= link_to "Tutaj", new_post_path, :style=>'color: #FF4C00;' %> </p>
+	  <br/>
+	  <br/>
+	  <br/>
+	  <strong><h2 style="color:#87CEEB">"Podczas dobrej jazdy na motocyklu przeżywasz więcej w ciągu 5 minut niż niektórzy ludzie przez całe swoje życie."</h2></strong>
 
 	</div>
 </div>
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
+<%= render 'alerts' %>

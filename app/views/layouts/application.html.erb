@@ -21,6 +21,7 @@
 				<% else %>	
 					<li><%= link_to "Zaloguj", new_user_session_path %></li>
 				<% end %>
+					<li><%= link_to "Posty", home_path %></li>
 			</ul>
 			<% if user_signed_in? %>
 				<p><%= link_to "Nowy Post", new_post_path, class: "navbar-text navbar-link navbar-right" %></p>

@@ -7,7 +7,7 @@
 
 
 			<div class="links btn-group">
-				<%= link_to "Wróć", root_path, class: "btn btn-default" %>
+				<%= link_to "Wróć", home_path, class: "btn btn-default" %>
 				<% if @post.user_id == current_user.id %>
 					<%= link_to "Edytuj", edit_post_path(@post), class: "btn btn-default" %>
 					<%= link_to "Usuń", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default" %>
@@ -16,3 +16,5 @@
 		</div>
 	</div>
 </div>
+
+<%= render 'alerts' %>

@@ -1,0 +1,5 @@
+<%= simple_form_for @post do |f| %>
+  <%= f.input :title, label: "Tytuł" %>
+  <%= f.input :description, label: "Opis" %>
+  <%= f.button :submit, 'Utwórz'  %>
+<% end %>

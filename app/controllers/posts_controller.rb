@@ -26,12 +26,23 @@ class PostsController < ApplicationController
 	end
 
 	def edit
+		unless current_user == @post.user
+			redirect_to(@post, notice: "Nie możesz edytować tego postu")
+		end
 	end
 
 	def update
+		if @post.update(post_params)
+			redirect_to post_path
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy
+		if @post.destroy
+			redirect_to home_path
+		end
 	end
 
 	private
