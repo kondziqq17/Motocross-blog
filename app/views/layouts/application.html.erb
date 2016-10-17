@@ -24,10 +24,26 @@
 					<li><%= link_to "Posty", home_path %></li>
 			</ul>
 			<% if user_signed_in? %>
-				<p><%= link_to "Nowy Post", new_post_path, class: "navbar-text navbar-link navbar-right" %></p>
+				<p><%= link_to "Nowy Post", new_post_path, class: "navbar-text navbar-link navbar-right", :style=>'color: #000000;' %></p>
 			<% end %>
 		</div>
 	</nav>
+
+
+  <nav class="navbar navbar-fixed-bottom">
+    <div class="container">
+      <br/>
+      <p class="text-center fa-1x">
+        kondziqq17
+        <a href="https://github.com/kondziqq17/Motocross-blog" style="color:#000000">
+          <%= icon("github-square fa-3x") %>
+        <a href="https://pl.linkedin.com/in/konrad-pasoń-a3bb6b116" style="color:#000000">
+          <%= icon("linkedin-square fa-3x") %>
+        </a>
+      </p>
+    </div>
+  </nav>
+
 
 
 
