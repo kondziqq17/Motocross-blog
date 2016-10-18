@@ -1,8 +1,10 @@
+<br/>
+<br/>
 <div class="container text-center">
 	<% @posts.each do |post| %>
 		<div class="col-md-6">
 			<div class="post">
-				<h2><%= link_to post.title, post_with_title_path(post, :title => post.title)%><h2>
+				<h2><%= link_to post.title, post_with_title_path(post, :title => post.title)%></h2>
 			</div>
 		</div>
 	<% end %>

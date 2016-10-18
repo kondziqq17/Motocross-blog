@@ -4,7 +4,7 @@
 			<h2><%= @post.title %></h2>
 			<p class="post-posted-by">Utworzone przez <%= @post.user.email %> <%= time_ago_in_words(@post.created_at) %> ago</p>
 			<p class="post-desc"><%= @post.description %></p>
-
+			<%= image_tag @post.image.url(:medium) %><br/>
 
 			<div class="links btn-group">
 				<%= link_to "Wróć", home_path, class: "btn btn-default" %>

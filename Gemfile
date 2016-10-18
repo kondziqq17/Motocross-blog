@@ -18,6 +18,7 @@ gem 'simple_form', '~> 3.3', '>= 3.3.1'
 gem 'devise', '~> 4.2'
 gem 'font-awesome-sass'
 gem 'will_paginate'
+gem "paperclip", "~> 5.0.0"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

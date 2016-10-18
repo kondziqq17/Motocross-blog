@@ -1,5 +1,6 @@
-<%= simple_form_for @post do |f| %>
+<%= simple_form_for @post, html: { multipart: true } do |f| %>
   <%= f.input :title, label: "Tytuł" %>
+  <%= f.file_field :image %>
   <%= f.input :description, label: "Opis" %>
   <%= f.button :submit, 'Utwórz'  %>
 <% end %>
