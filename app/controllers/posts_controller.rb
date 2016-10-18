@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 
 	def home
 		@posts = Post.all.order("created_at DESC")
-		@posts = Post.paginate(page: params[:page], per_page: 4)
+		@posts = Post.reorder("created_at DESC").page(params[:page]).per_page(4)
 	end
 
 	def show
