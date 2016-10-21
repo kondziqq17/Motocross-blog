@@ -11,11 +11,19 @@
 				<% end %>
 				<br/>
 
+				<h3>Komentarze</h3>
+				<%= render @post.comments %>
+
+				<h3>Zostaw Komentarz</h3>
+				<%= render 'comments/form' %><br/>
+
 			<div class="links btn-group">
 				<%= link_to "Wróć", home_path, class: "btn btn-default" %>
+				<% if user_signed_in? %>
 				<% if @post.user_id == current_user.id %>
 					<%= link_to "Edytuj", edit_post_path(@post), class: "btn btn-default" %>
 					<%= link_to "Usuń", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default" %>
+				<% end %>
 				<% end %>
 			</div>
 		</div>
