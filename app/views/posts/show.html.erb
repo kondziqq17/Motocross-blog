@@ -15,8 +15,9 @@
 				<%= render @post.comments %>
 
 				<h3>Zostaw Komentarz</h3>
-				<%= render 'comments/form' %><br/>
-
+				<%= render 'comments/form' %>
+				
+				
 			<div class="links btn-group">
 				<%= link_to "Wróć", home_path, class: "btn btn-default" %>
 				<% if user_signed_in? %>

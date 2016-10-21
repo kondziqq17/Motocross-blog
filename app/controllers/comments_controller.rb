@@ -1,6 +1,8 @@
 class CommentsController < ApplicationController
 	before_action :find_post
 	before_action :find_comment, only: [:edit, :update, :destroy]
+	before_action :authenticate_user!
+
 	def create
 		@comment = @post.comments.create(comment_params)
 		@comment.user_id = current_user.id
@@ -8,13 +10,13 @@ class CommentsController < ApplicationController
 		if @comment.save
 			redirect_to post_path(@post)
 		else
-			render 'new'
+			flash[:alert] = "Komentarz nie może być pusty!"
+			redirect_to post_path(@post)
 		end
 	end
 
 	def edit
-		redirect_to(@post, notice: "Nie możesz edytować tego komentarza")
-		end
+	end
 
 	def update
 		if @comment.update(comment_params)
