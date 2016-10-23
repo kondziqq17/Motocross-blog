@@ -20,6 +20,7 @@ gem 'devise', '~> 4.2'
 gem 'font-awesome-sass'
 gem 'will_paginate'
 gem "paperclip", "~> 5.0.0"
+gem 'will_paginate-bootstrap'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
