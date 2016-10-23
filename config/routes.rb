@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 		resources :comments
 	end
 
-	get '/home' => 'posts#home'
+	get '/home', to: 'posts#home'
 	get '/posts/:id/:title' => 'posts#show', :as => :post_with_title
+	get '/about', to: 'pages#about'
 
 end
