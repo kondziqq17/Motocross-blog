@@ -5,7 +5,7 @@
 			<p class="post-posted-by">Utworzone przez <%= @post.user.email %> <%= time_ago_in_words(@post.created_at) %> ago</p>
 			<p class="post-desc"><%= @post.description %></p>
 				<% if @post.image.file? %>
-					<%= image_tag @post.image.url(:medium) %>
+					<%= image_tag @post.image.url(:large) %>
 				<% else %>
 					Brak Zdjęcia
 				<% end %>
