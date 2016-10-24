@@ -19,7 +19,8 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
+@import url('https://fonts.googleapis.com/css?family=Michroma');
+@import url('https://fonts.googleapis.com/css?family=Hind+Vadodara');
 body {
 	background-color: #fff;
 	font-family: 'Playfair Display', serif;
@@ -31,12 +32,13 @@ body {
 
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Muli', sans-serif;
+	font-family: 'Hind Vadodara', sans-serif;
 	font-weight: 300;	
 }
 
 .navbar-fixed-top .navbar-brand {
 	color: #000000;
+	font-family: 'Michroma', sans-serif;
 }
 
 .navbar {
@@ -46,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-fixed-top .navbar-nav > li > a {
 	color: #262626;
-
+	font-family: 'Hind Vadodara', sans-serif;
 }
 
 
@@ -60,13 +62,21 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     color: #fff;
     text-shadow: 3px 4px 5px #000;
+    border-radius: 6px;
+}
+.jumbotron, h1 {
+	font-family: 'Michroma', sans-serif;
+}
+
+.jumbotron, p {
+	font-family: 'Hind Vadodara', sans-serif;
 }
 
 
 .btn-custom {
 	background-color: #fff;
 	color: #0a8fd5;
-	font-family: 'Muli', sans-serif; 
+	font-family: 'Michroma', sans-serif; 
 	font-weight: 300;
 	border-radius: 8px;
 	padding: 10px 20px;
@@ -98,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 
 	.post-title {
 		font-size: 1.5em;
-		font-family: 'Muli', sans-serif;
+		font-family: 'Hind Vadodara', sans-serif;
 		font-weight: 300;
 		margin-top: 0;
 		text-align:center;
@@ -120,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 2.0em 1.5em;
 	border-bottom: 0px solid #0a8fd5;
 	color: #262626;
-	font-family: 'Muli', sans-serif;
+	font-family: 'Hind Vadodara', sans-serif;
 	font-weight: 300;
 
 	h2 {
@@ -138,6 +148,10 @@ h1, h2, h3, h4, h5, h6 {
 		font-size: 0.9em;
 	}
 
+}
+
+.new-post-header {
+	font-family: 'Hind Vadodara', sans-serif;
 }
 
 	#page_wrapper {
