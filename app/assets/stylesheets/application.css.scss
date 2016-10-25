@@ -36,9 +36,12 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;	
 }
 
+
+
 .navbar-fixed-top .navbar-brand {
 	color: #000000;
 	font-family: 'Michroma', sans-serif;
+	
 }
 
 .navbar {
@@ -49,7 +52,9 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-fixed-top .navbar-nav > li > a {
 	color: #262626;
 	font-family: 'Hind Vadodara', sans-serif;
+
 }
+
 
 
 .jumbotron  {
@@ -92,6 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 	transition: 0.5s;
 	color: #383838;
 	background-color: #fff;
+
 }
 
 
@@ -152,7 +158,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .new-post-header {
 	font-family: 'Hind Vadodara', sans-serif;
-}
+	}
 
 	#page_wrapper {
 		padding: 3em;
@@ -168,8 +174,10 @@ h1, h2, h3, h4, h5, h6 {
 		}
 
 		#content {
-			h1 {
+			h2 {
 				font-weight: 500;
+
+
 			}
 			p {
 				font-size: 1.1em;
@@ -181,4 +189,5 @@ h1, h2, h3, h4, h5, h6 {
 				text-decoration: none;
 			}
 		}
-	}		
+	}
+	
