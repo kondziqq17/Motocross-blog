@@ -52,26 +52,34 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-fixed-top .navbar-nav > li > a {
 	color: #262626;
 	font-family: 'Hind Vadodara', sans-serif;
-	
-
 }
 
 
+  .homepage-icon {
+    border: 1px solid #1FA67A;
+    padding: 35px 37px;
+    border-radius: 50%;
+  }
 
-.jumbotron  {
-    background-image: image-url("motocross1.jpg");
-    width: 100%;
-    height: 65vh;
-    margin-bottom: 0px;
-    background-size: cover;
-    background-repeat: no-repeat; 
-    overflow: hidden;
-    color: #fff;
-    text-shadow: 3px 4px 5px #000;
-    border-radius: 6px;
-}
+
+  .jumbotron {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+  }
+
+
+.jumbotron {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  background-image: url("motocross1.jpg");
+  background-size: cover;
+  border-radius: 8px;
+
 .jumbotron, h1 {
 	font-family: 'Michroma', sans-serif;
+	}
+
 }
 
 .jumbotron, p {
