@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 	before_filter :authenticate_user!, except: [:index, :home, :show]
-	before_action :find_post, only: [:show, :edit, :update, :destroy]
+	before_action :find_post, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
 
 	def index
 	end
@@ -44,6 +44,16 @@ class PostsController < ApplicationController
 		if @post.destroy
 			redirect_to home_path
 		end
+	end
+
+	def upvote
+		@post.upvote_from current_user
+		redirect_to post_path
+	end
+
+	def downvote
+		@post.downvote_from current_user
+		redirect_to post_path		
 	end
 
 	private

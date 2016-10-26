@@ -1,20 +1,35 @@
-<h2 class="text-center">Posty</h2>
+<div class="container">
+	<div class="row">
+	<h2 class="text-center">Posty</h2>
 <hr>
-
-<div class="container  ">
-<div class="row">
 <% @posts.each do |post| %>
 <div class="col-md-6 col-md-3 text-center">
-<div class="post">
-	<a href="/posts/<%= post.id %>">
-		<h2><%= link_to post.title, post_with_title_path(post, :title => post.title) %></h2>
-		<% if post.image.file? %>
-					<%= image_tag(post.image, size: "250x250") %>
-				<% else %>
+	<div class="post">
+		<a href="/posts/<%= post.id %>">
+			<h2><%= link_to post.title, post_with_title_path(post, :title => post.title) %></h2>
+			<% if post.image.file? %>
+				<%= image_tag(post.image, size: "250x250") %>
+			<% else %>
 					Brak Zdjęcia
-				<% end %>
-	</a>
-</div>	
+			<% end %>
+		</a>
+		<div class="caption" style="text-align:center;">
+			<%= link_to like_post_path(post), class: "like", method: :put do %>
+			<button type="button" class="btn btn-info" aria-label="Left Align">
+			<span class="fa fa-thumbs-up fa-align-center" aria-hidden="true"></span>
+			<span class="badge"><%= post.get_upvotes.size %></span>
+			</button>
+			<% end %>
+
+
+			<%= link_to unlike_post_path(post), class: "unlike", method: :put do %>
+			<button type="button" class="btn btn-info" aria-label="Left Align">
+			<span class="fa fa-thumbs-down fa-align-center" aria-hidden="true"></span>
+			<span class="badge"><%= post.get_downvotes.size %></span>
+			</button>
+			<% end %>
+			</div>
+	</div>	
 </div>
 <% end %>
 </div>
