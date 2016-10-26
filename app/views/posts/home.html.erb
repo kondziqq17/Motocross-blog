@@ -13,22 +13,7 @@
 					Brak Zdjęcia
 			<% end %>
 		</a>
-		<div class="caption" style="text-align:center;">
-			<%= link_to like_post_path(post), class: "like", method: :put do %>
-			<button type="button" class="btn btn-info" aria-label="Left Align">
-			<span class="fa fa-thumbs-up fa-align-center" aria-hidden="true"></span>
-			<span class="badge"><%= post.get_upvotes.size %></span>
-			</button>
-			<% end %>
 
-
-			<%= link_to unlike_post_path(post), class: "unlike", method: :put do %>
-			<button type="button" class="btn btn-info" aria-label="Left Align">
-			<span class="fa fa-thumbs-down fa-align-center" aria-hidden="true"></span>
-			<span class="badge"><%= post.get_downvotes.size %></span>
-			</button>
-			<% end %>
-			</div>
 	</div>	
 </div>
 <% end %>
