@@ -13,21 +13,19 @@
 		<div class="container">
 			<div class="navbar-header">
 				<strong><%= link_to "Motocross", root_path, class: "navbar-brand" %></strong>
-		</div>
-			<ul class="navbar-nav nav">
-				<li><%= link_to "Zarejestruj", new_user_registration_path %></li>
+		  </div>
+			 <ul class="navbar-nav nav">
+				  <li><%= link_to "Zarejestruj", new_user_registration_path %></li>
 				<% if user_signed_in? %>
 					<li><%= link_to "Wyloguj", destroy_user_session_path, method: :delete %></li>
 				<% else %>	
 					<li><%= link_to "Zaloguj", new_user_session_path %></li>
 				<% end %>
-			 <% if user_signed_in? %>
        </ul>
        <ul class="navbar-nav nav pull-right"> 
-       <li><%= link_to "Posty", home_path %></li>
+        <li><%= link_to "Posty", home_path %></li>
 				<li><%= link_to "Nowy Post", new_post_path %></li>
-				</ul>
-			 <% end %>
+			 </ul>
 		</div>
 	</nav>     
 

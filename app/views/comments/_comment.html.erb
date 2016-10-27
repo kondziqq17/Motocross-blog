@@ -1,9 +1,9 @@
 <strong><p class="post-posted-by">Utworzone przez <%= comment.user.email %> <%=time_ago_in_words(comment.created_at) %> ago</p></strong>
-<p><%= comment.content %></p>
-<% if user_signed_in? %>
-<% if comment.user_id == current_user.id %>
-<%= link_to "Edytuj", edit_post_comment_path(comment.post, comment), class: "btn btn-default" %>
-<%= link_to "Usuń", post_comment_path(comment.post, comment), method: :delete, data: { confirm: "Na pewno chcesz usunąć komentarz?"}, class: "btn btn-default"  %>
-<% end %>
-<% end %>
+	<p><%= comment.content %></p>
+	<% if user_signed_in? %>
+	<% if comment.user_id == current_user.id %>
+	<%= link_to "Edytuj", edit_post_comment_path(comment.post, comment), class: "btn btn-default" %>
+	<%= link_to "Usuń", post_comment_path(comment.post, comment), method: :delete, data: { confirm: "Na pewno chcesz usunąć komentarz?"}, class: "btn btn-default"  %>
+	<% end %>
+	<% end %>
 <hr>
