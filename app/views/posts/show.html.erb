@@ -24,28 +24,30 @@
 				<span class="fa fa-thumbs-up fa-align-left" aria-hidden="true"></span>
 				<span class="badge"><%= @post.get_upvotes.size %></span>
 				</button>
-			<% end %>
+				<% end %>
 
 
-			<%= link_to unlike_post_path(@post), class: "unlike", method: :put do %>
-			<button type="button" class="btn btn-info" aria-label="Left Align">
-			<span class="fa fa-thumbs-down fa-align-left" aria-hidden="true"></span>
-			<span class="badge"><%= @post.get_downvotes.size %></span>
-			</button>
-			<% end %>
-			</div><br>
+				<%= link_to unlike_post_path(@post), class: "unlike", method: :put do %>
+				<button type="button" class="btn btn-danger" aria-label="Left Align">
+				<span class="fa fa-thumbs-down fa-align-left" aria-hidden="true"></span>
+				<span class="badge"><%= @post.get_downvotes.size %></span>
+				</button>
+				<% end %>
+				</div><br>
 
-			<div class="links btn-group">
-				<%= link_to "Wróć", home_path, class: "btn btn-default" %>
-					<% if user_signed_in? %>
-						<% if @post.user_id == current_user.id %>
-							<%= link_to "Edytuj", edit_post_path(@post), class: "btn btn-default" %>
-							<%= link_to "Usuń", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default" %>
-						<% end %>
-					<% end %>
+				<div class="links btn-group">
+					<%= link_to "Wróć", home_path, class: "btn btn-default" %>
+						<% if user_signed_in? %>
+							<% if @post.user_id == current_user.id %>
+								<%= link_to "Edytuj", edit_post_path(@post), class: "btn btn-default" %>
+								<%= link_to "Usuń", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default" %>
+								<% end %>
+									<% end %>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
 
 <%= render 'alerts' %>
