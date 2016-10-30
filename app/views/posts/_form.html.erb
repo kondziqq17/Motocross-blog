@@ -1,6 +1,5 @@
 <%= simple_form_for @post, html: { multipart: true } do |f| %><br/>
   <%= f.file_field :image %>
-  <%= f.input :_destroy, as: :boolean, required: :false, label: 'Usuń Zdjęcie' %>
   <%= f.input :title, label: "Tytuł" %>
   <%= f.input :description, label: "Opis" %>
   <%= f.button :submit, 'Utwórz'  %>
