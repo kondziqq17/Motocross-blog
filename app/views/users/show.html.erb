@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="row">
+		<h2 class="text-center"><%= @user.email %></h2><hr>
+			<% @user_posts.each do |post| %>
+				<div class="col-md-6 col-md-3 text-center">
+					<div class="post">
+						<a href="/posts/<%= post.id %>">
+							<h2><%= link_to post.title, post_with_title_path(post, :title => post.title) %></h2>
+							<% if post.image.file? %>
+								<%= image_tag(post.image, size: "250x250") %>
+							<% else %>
+								Brak Zdjęcia
+							<% end %>
+						</a>
+					</div>	
+				</div>
+			<% end %>
+	</div>
+</div>

@@ -12,8 +12,11 @@ Rails.application.routes.draw do
 	end
 end
 
+
 	get '/home', to: 'posts#home'
 	get '/posts/:id/:title' => 'posts#show', :as => :post_with_title
 	get '/about', to: 'pages#about'
+
+	resources :users
 
 end

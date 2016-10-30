@@ -20,7 +20,7 @@
 				
 			<div class="caption" style="text-align:left;">
 				<%= link_to like_post_path(@post), class: "like", method: :put do %>
-				<button type="button" class="btn btn-info" aria-label="Left Align">
+				<button type="button" class="btn btn-primary" aria-label="Left Align">
 				<span class="fa fa-thumbs-up fa-align-left" aria-hidden="true"></span>
 				<span class="badge"><%= @post.get_upvotes.size %></span>
 				</button>

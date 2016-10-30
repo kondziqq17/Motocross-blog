@@ -6,7 +6,6 @@ class PostsController < ApplicationController
 	end
 
 	def home
-		@posts = Post.all.order("created_at DESC")
 		@posts = Post.reorder("created_at DESC").page(params[:page]).per_page(4)
 	end
 
@@ -59,7 +58,7 @@ class PostsController < ApplicationController
 	private
 
 		def post_params
-			params.require(:post).permit(:title, :description, :image)
+			params.require(:post).permit(:title, :description, :image, :_destroy)
 		end
 
 		def find_post

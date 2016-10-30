@@ -55,6 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
   .homepage-icon {
     border: 1px solid #1FA67A;
     padding: 35px 37px;
@@ -111,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .post {
 	box-sizing: border-box;
-	border-radius: 25px;
+	border-radius: 15px;
 	background-color: #F5F5F5;
 	margin-bottom: 25px;
 	margin-right: 10px;
@@ -133,7 +134,11 @@ h1, h2, h3, h4, h5, h6 {
 	img.displayed {
     display: block;
     margin-left: auto;
-    margin-right: auto 
+    margin-right: auto;
+    }
+
+    img {
+    border: 15px;
     }
 
 	.fillwidth {
