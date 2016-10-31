@@ -17,5 +17,5 @@ def delete_image
 end
 
 def delete_image(value)
-	@delete_image = !value.to_i.zerio?
+	@delete_image = !value.to_i.zero?
 end
