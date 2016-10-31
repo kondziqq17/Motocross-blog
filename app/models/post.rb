@@ -4,7 +4,18 @@ class Post < ApplicationRecord
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 	validates :title, presence: true, length: { maximum: 30 }
 	validates :description, presence: true, length: { minimum: 5 }
+	attr_accessor :delete_image
 	belongs_to :user
 	has_many :comments
+	before_validation { image.clear if delete_image == '1' }
 
+end
+
+
+def delete_image
+	@delete_image ||= false
+end
+
+def delete_image(value)
+	@delete_image = !value.to_i.zerio?
 end

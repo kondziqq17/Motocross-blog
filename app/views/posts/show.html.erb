@@ -7,7 +7,7 @@
 					<% if @post.image.file? %>
 						<%= image_tag @post.image.url(:large) %>
 					<% else %>
-						Brak Zdjęcia
+						<h2 class="text-center">Brak Zdjęcia</h2>
 					<% end %>
 					<br/>
 
