@@ -1,11 +1,12 @@
+<br/>
 <div class="container">
 	<div class="col-md-8 col-md-offset-2">
 		<div class="post-show">
 			<h2><%= @post.title %></h2>
 				<p class="post-posted-by">Utworzone przez <%= @post.user.email %> <%= time_ago_in_words(@post.created_at) %> ago</p>
-				<p class="post-desc"><%= @post.description %></p>
+				<p class="post-desc"><%= @post.description %></p><hr>
 					<% if @post.image.file? %>
-						<%= image_tag @post.image.url(:large) %>
+						<%= image_tag @post.image.url(:large), :class => "style_image" %>
 					<% else %>
 						<h2 class="text-center">Brak Zdjęcia</h2>
 					<% end %>

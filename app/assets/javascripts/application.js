@@ -17,7 +17,7 @@
 //= require_tree .
 
 window.addEventListener("scroll", function() {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 20) {
         $('.navbar').fadeOut();
     }
     else {

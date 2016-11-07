@@ -22,9 +22,10 @@
 <div class="container text-center">
 	<div class="col-md-8 col-md-offset-2">
 		<div class="pagination">	
-			<%= will_paginate @post, renderer: BootstrapPagination::Rails %>
+			<%= will_paginate @post, renderer: BootstrapPagination::Rails %><br>
+			<%= link_to "Wróć", root_path, class: "btn btn-default" %>
 		</div>
 	</div>	
 </div>
 <br/>
-<br/>
+<br/>		
